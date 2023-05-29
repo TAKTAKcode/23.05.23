@@ -26,6 +26,21 @@ public class Main {
             }
         }
 
+        int max = -1;
+        char ch = '?';
+
+        for (int i = 0; i < 26; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+                ch = (char) (i + 65); // 대문자로 출력해야하므로 65를 더해준다.
+            }
+            else if (arr[i] == max) {
+                ch = '?';
+            }
+        }
+
+        System.out.print(ch);
+
     }
 
 }
